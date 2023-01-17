@@ -281,6 +281,7 @@ MonoBehaviour:
   canSprint: 1
   canHeadBob: 1
   useFootsteps: 1
+  useStamina: 1
   sprintKey: 304
   WalkSpeed: 3
   SprintSpeed: 6
@@ -289,12 +290,17 @@ MonoBehaviour:
   LookSpeedY: 2
   UpperLookLimit: 80
   LowerLookLimit: 80
+  maxStamina: 50
+  staminaDrain: 5
+  timeBeforeStart: 5
+  staminaRegenValue: 2
+  staminaRegenTime: 0.1
   walkBobSpeed: 12
   walkBobAmount: 0.03
   SprintBobSpeed: 18
   SprintBobAmount: 0.11
-  baseStepSpeed: 1.1
-  SprintStepMultiplier: 0.7
+  baseStepSpeed: 0.9
+  SprintStepMultiplier: 0.5
   footstepAudioSource: {fileID: 1376066998667713258}
   WalkClips:
   - {fileID: 8300000, guid: fbe4df9ba058fb44a8ba1d09d98ea419, type: 3}
@@ -379,7 +385,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 369834adec73b8f468d27928e0bb4202, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -467,6 +473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1376066999515882064}
   - component: {fileID: 1376066999515882065}
+  - component: {fileID: 427107018}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -501,10 +508,10 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.5
-  m_Range: 15
-  m_SpotAngle: 60
-  m_InnerSpotAngle: 6
+  m_Intensity: 1
+  m_Range: 20
+  m_SpotAngle: 50
+  m_InnerSpotAngle: 5
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -551,3 +558,17 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &427107018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376066999515882079}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7dd2c4c7735f7d40a15d5249b33fcd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeDelay: 0
+  flickerLength: 0

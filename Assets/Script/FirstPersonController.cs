@@ -78,7 +78,6 @@ public class FirstPersonController : MonoBehaviour
         {
             MovementInput();
             MouseLook();
-            //Interact();
             ApplyMovement();
 
             if (canHeadBob)
@@ -148,7 +147,7 @@ public class FirstPersonController : MonoBehaviour
             if (currentStamina <= 0)
                 canSprint = false;
         }
-        if(!IsSprinting && currentStamina < maxStamina && regeneratingStamina != null)
+        if(!IsSprinting && currentStamina < maxStamina && regeneratingStamina == null)
         {
             regeneratingStamina = StartCoroutine(RegenStamina());
         }
@@ -178,24 +177,6 @@ public class FirstPersonController : MonoBehaviour
             footstepTimer = GetCurrentOffset;
         }
     }
-
-    // ***** Interact *****
-    /*
-    private void Interact()
-    {
-        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit hit, 3))
-        {
-            if (hit.transform.CompareTag("KeyCard"))
-            {
-                if (Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.F))
-                {
-                    Debug.Log("KeyCard Obtained");
-                }
-            }           
-        }
-    }
-    */
-    // ***** PLAYER Check if can move *****
 
     private void ApplyMovement()
     {
