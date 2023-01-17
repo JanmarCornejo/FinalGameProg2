@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class LightSpin : MonoBehaviour
 {
-    [SerializeField] int Speed;
+    [SerializeField] int XSpin;
+    [SerializeField] int YSpin;
+    [SerializeField] int ZSpin;
+
 
     void Start()
     {
@@ -13,6 +16,6 @@ public class LightSpin : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(0f, 0f, Speed * Time.deltaTime, Space.Self);
+        transform.Rotate(XSpin * Time.deltaTime, YSpin * Time.deltaTime, ZSpin * Time.deltaTime, Space.Self);
     }
 }

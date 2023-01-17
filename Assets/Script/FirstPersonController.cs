@@ -12,6 +12,7 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private bool canSprint = true;
     [SerializeField] private bool canHeadBob = true;
     [SerializeField] private bool useFootsteps = true;
+    [SerializeField] private bool useStamina = true;
 
     [Header("Controls")]
     [SerializeField] private KeyCode sprintKey = KeyCode.LeftShift;
@@ -26,6 +27,16 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField, Range(1, 10)] private float LookSpeedY = 2.0f;
     [SerializeField, Range(1, 180)] private float UpperLookLimit = 80.0f;
     [SerializeField, Range(1, 180)] private float LowerLookLimit = 80.0f;
+
+
+    [Header("Stamina Parameters")]
+    [SerializeField] private float maxStamina = 100;
+    [SerializeField] private float staminaDrain = 5;
+    [SerializeField] private float timeBeforeStart = 5;
+    [SerializeField] private float staminaRegenValue = 2;
+    [SerializeField] private float staminaRegenTime = 0.1f;
+    private float currentStamina;
+    private Coroutine regeneratingStamina;
 
     [Header("Headbob Parameters")]
     [SerializeField] private float walkBobSpeed = 14f;
@@ -51,6 +62,7 @@ public class FirstPersonController : MonoBehaviour
 
     private float rotationX = 0;
 
+
     void Start()
     {
         playerCamera = GetComponentInChildren<Camera>();
@@ -74,6 +86,9 @@ public class FirstPersonController : MonoBehaviour
 
             if (useFootsteps)
                 HandleFootstep();
+
+            if (useStamina)
+                HandleStamina();
         }
     }
 
@@ -114,6 +129,31 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
+    // ***** PLAYER STAMINA *****
+
+    private void HandleStamina()
+    {
+        if(IsSprinting && CurrentInput != Vector2.zero)
+        {
+            if(regeneratingStamina != null)
+            {
+                StopCoroutine(regeneratingStamina);
+                regeneratingStamina = null;
+            }
+
+            currentStamina -= staminaDrain * Time.deltaTime;
+
+            if (currentStamina < 0)
+                currentStamina = 0;
+            if (currentStamina <= 0)
+                canSprint = false;
+        }
+        if(!IsSprinting && currentStamina < maxStamina && regeneratingStamina != null)
+        {
+            regeneratingStamina = StartCoroutine(RegenStamina());
+        }
+    }
+    
     // ***** PLAYER FOOTSTEP SOUNDS *****
 
     private void HandleFootstep()
@@ -165,4 +205,26 @@ public class FirstPersonController : MonoBehaviour
         CharacCtrl.Move(MoveDir * Time.deltaTime);
     }
 
+    // ***** Coroutines *****
+
+    private IEnumerator RegenStamina()
+    {
+        yield return new WaitForSeconds(timeBeforeStart);
+        WaitForSeconds timeToWait = new WaitForSeconds(staminaRegenTime);
+
+        while(currentStamina < maxStamina)
+        {
+            if (currentStamina > 0)
+                canSprint = true;
+
+            currentStamina += staminaRegenValue;
+
+            if (currentStamina > maxStamina)
+                currentStamina = maxStamina;
+
+            yield return timeToWait;
+        }
+
+        regeneratingStamina = null;
+    }
 }
