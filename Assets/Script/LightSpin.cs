@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class LightSpin : MonoBehaviour
 {
+
     [SerializeField] int XSpin;
     [SerializeField] int YSpin;
     [SerializeField] int ZSpin;
-
-
-    void Start()
-    {
-        
-    }
 
     void Update()
     {

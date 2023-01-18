@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Flashlight : MonoBehaviour
 {
+
     [SerializeField] GameObject flashlightLight;
     private bool LightIsOn = false;
     void Start()
