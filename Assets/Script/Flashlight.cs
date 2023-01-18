@@ -12,12 +12,13 @@ public class Flashlight : MonoBehaviour
     }
 
     void Update()
-    {
+    { 
         if (Input.GetKeyDown(KeyCode.F))
         {
             FindObjectOfType<SoundManager>().Play("Switch");
             if (LightIsOn == false)
-            {
+            {    
+
                 flashlightLight.gameObject.SetActive(true);
                 LightIsOn = true;
             }
