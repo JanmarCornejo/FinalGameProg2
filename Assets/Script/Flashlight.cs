@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class Flashlight : MonoBehaviour
 {
-<<<<<<< HEAD
-
-=======
-   
->>>>>>> 5dbcdbfc71a968e8114adb0678b22318cc1cf54e
     [SerializeField] GameObject flashlightLight;
     private bool LightIsOn = false;
     void Start()
