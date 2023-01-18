@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class Flashlight : MonoBehaviour
 {
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> 5dbcdbfc71a968e8114adb0678b22318cc1cf54e
     [SerializeField] GameObject flashlightLight;
     private bool LightIsOn = false;
     void Start()
@@ -16,6 +20,7 @@ public class Flashlight : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
+            FindObjectOfType<SoundManager>().Play("Switch");
             if (LightIsOn == false)
             {
                 flashlightLight.gameObject.SetActive(true);
