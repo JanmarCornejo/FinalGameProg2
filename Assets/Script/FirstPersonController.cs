@@ -200,6 +200,7 @@ public class FirstPersonController : MonoBehaviour
         }
     }
     */
+    
     // ***** PLAYER Check if can move *****
 
     private void ApplyMovement()

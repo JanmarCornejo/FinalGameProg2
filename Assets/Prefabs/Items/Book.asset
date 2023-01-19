@@ -15,3 +15,4 @@ MonoBehaviour:
   id: 1
   itemName: Book
   icon: {fileID: 21300000, guid: 908611570e8092b40975b76fdfba82b2, type: 3}
+  type: 1

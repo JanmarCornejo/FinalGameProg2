@@ -7,8 +7,16 @@ public class ClickSaveWindow : MonoBehaviour
     [SerializeField] private SaveWindow mySaveWindow;
     [SerializeField] private Crosshair crosshair;
 
+    public Camera playerCamera;
+
     public static bool isPaused;
 
+    void Update()
+    {
+        InteractSave();
+    }
+
+    /*
     void OnMouseDown() 
     {
 
@@ -19,6 +27,7 @@ public class ClickSaveWindow : MonoBehaviour
         }
 
     }
+    */
 
     public void PauseGame()
     {
@@ -50,5 +59,28 @@ public class ClickSaveWindow : MonoBehaviour
         Debug.Log("Closed Save Window.");
         Time.timeScale = 1f;
         isPaused = false;
+    }
+
+    void OpenSaveWindow()
+    {
+        if (!isPaused)
+        {
+            PauseGame();
+            Debug.Log("Opened Save Window.");
+        }
+    }
+
+    private void InteractSave()
+    {
+        if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit hit, 3))
+        {
+            if (hit.transform.CompareTag("Computer"))
+            {
+                if (Input.GetKey(KeyCode.E))
+                {
+                    OpenSaveWindow();
+                }
+            }
+        }
     }
 }

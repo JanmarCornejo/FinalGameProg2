@@ -15,3 +15,4 @@ MonoBehaviour:
   id: 2
   itemName: Old Key
   icon: {fileID: 21300000, guid: 6fc6521d33ca98a4188abef56fe2eacc, type: 3}
+  type: 0
