@@ -12,6 +12,8 @@ public class ItemPickup : MonoBehaviour
     [SerializeField] private bool isThirdKeyCard = true;
 
     public TextMeshProUGUI showAcquiredPrompt;
+    public TextMeshProUGUI showDialogueText;
+    public Image showUnderlineAnim;
 
     public Item item;
 
@@ -44,7 +46,13 @@ public class ItemPickup : MonoBehaviour
     public void EnableText()
     {
         showAcquiredPrompt.gameObject.SetActive(true);
+        showUnderlineAnim.gameObject.SetActive(true);
 
+    }
+
+    public void EnableDialogue()
+    {
+        showDialogueText.gameObject.SetActive(true);
     }
 
     private void InteractFirstKeyCard()
@@ -91,6 +99,7 @@ public class ItemPickup : MonoBehaviour
                 {
                     Pickup();
                     EnableText();
+                    EnableDialogue();
 
                     Debug.Log("Executive Card Obtained.");
                 }
