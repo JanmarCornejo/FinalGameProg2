@@ -78,7 +78,7 @@ public class FirstPersonController : MonoBehaviour
         {
             MovementInput();
 
-            if (!ClickSaveWindow.isPaused) // Camera Movement stopped when in Save Window
+            if (!ClickSaveWindow.isPaused && !OpenInventory.isOpened) // Camera Movement stopped when opening windows
             {
                 MouseLook();
             }
