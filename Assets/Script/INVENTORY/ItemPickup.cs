@@ -17,8 +17,10 @@ public class ItemPickup : MonoBehaviour
 
     public Camera playerCamera;
 
-    private float timeToAppear = 2f;
-    private float timeWhenDisappear;
+    private void Start()
+    {
+        showAcquiredPrompt.gameObject.SetActive(false);
+    }
 
     void Update()
     {
@@ -31,10 +33,6 @@ public class ItemPickup : MonoBehaviour
         if (isThirdKeyCard)
             InteractThirdKeyCard();
 
-        if (showAcquiredPrompt.enabled && (Time.time >= timeWhenDisappear))
-        {
-            showAcquiredPrompt.enabled = false;
-        }
     }
 
     void Pickup()
@@ -45,8 +43,8 @@ public class ItemPickup : MonoBehaviour
 
     public void EnableText()
     {
-        showAcquiredPrompt.enabled = true;
-        timeWhenDisappear = Time.time + timeToAppear;
+        showAcquiredPrompt.gameObject.SetActive(true);
+
     }
 
     private void InteractFirstKeyCard()
