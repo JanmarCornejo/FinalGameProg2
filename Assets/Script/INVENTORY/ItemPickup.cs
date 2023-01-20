@@ -66,7 +66,7 @@ public class ItemPickup : MonoBehaviour
                     Pickup();
                     EnableText();
 
-                    Debug.Log("Level 2 KeyCard Obtained.");
+                    Debug.Log("CEO Keycard Obtained.");
                 }
             }
         }
@@ -83,7 +83,7 @@ public class ItemPickup : MonoBehaviour
                     Pickup();
                     EnableText();
 
-                    Debug.Log("CEO KeyCard Obtained.");
+                    Debug.Log("All Access Keycard Obtained.");
                 }
             }
         }
@@ -101,7 +101,7 @@ public class ItemPickup : MonoBehaviour
                     EnableText();
                     EnableDialogue();
 
-                    Debug.Log("Executive Card Obtained.");
+                    Debug.Log("Executive Keycard Obtained.");
                 }
             }
         }
