@@ -5,6 +5,8 @@ using UnityEngine;
 public class FirstPersonController : MonoBehaviour
 {
 
+
+
     public bool CanMove { get; private set; } = true;
     private bool IsSprinting => canSprint && Input.GetKey(sprintKey);
 
@@ -84,6 +86,7 @@ public class FirstPersonController : MonoBehaviour
             }
             
             //Interact();
+            MouseLook();
             ApplyMovement();
 
             if (canHeadBob)
@@ -153,7 +156,7 @@ public class FirstPersonController : MonoBehaviour
             if (currentStamina <= 0)
                 canSprint = false;
         }
-        if(!IsSprinting && currentStamina < maxStamina && regeneratingStamina != null)
+        if(!IsSprinting && currentStamina < maxStamina && regeneratingStamina == null)
         {
             regeneratingStamina = StartCoroutine(RegenStamina());
         }

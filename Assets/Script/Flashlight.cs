@@ -15,6 +15,7 @@ public class Flashlight : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
+            FindObjectOfType<SoundManager>().Play("Switch");
             if (LightIsOn == false)
             {
                 flashlightLight.gameObject.SetActive(true);
