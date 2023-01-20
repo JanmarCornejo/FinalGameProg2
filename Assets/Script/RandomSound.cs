@@ -29,7 +29,7 @@ public class RandomSound : MonoBehaviour
     {
         isMakingSound = true;
         Sounds();
-        timeDelay = Random.Range(0.01f, SoundLength);
+        timeDelay = Random.Range(500f, SoundLength);
         yield return new WaitForSeconds(timeDelay);
         isMakingSound = false;
     }
