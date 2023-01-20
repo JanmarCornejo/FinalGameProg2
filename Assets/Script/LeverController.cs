@@ -15,10 +15,14 @@ public class LeverController : MonoBehaviour
 {
     [SerializeField] private Animator _lever = null;
     private bool _isLeverPulled = false;
-    [SerializeField] private GameObject[] _lights= default;
+    [SerializeField] private Light[] _lights = default;
 
     public Camera playerCamera;
 
+    private void Start()
+    {
+        togglelight(false);
+    }
 
     private void Update()
     {
@@ -49,8 +53,14 @@ public class LeverController : MonoBehaviour
 
     void lightStatus()
     {
-        for(int i = 0; i < _lights.Length; i++) {
-            gameObject.SetActive(true);
+        togglelight(true);
+    }
+
+    void togglelight(bool enabled)
+    {
+        foreach (var light in _lights)
+        {
+            light.gameObject.SetActive(enabled);
         }
     }
     
