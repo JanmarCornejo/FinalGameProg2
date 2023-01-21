@@ -6,10 +6,12 @@ public class ScreenShake : MonoBehaviour
 {
     public AnimationCurve curve;
     public float duration = 1f;
+    [SerializeField] FirstPersonController Movement;
 
-    public void Update()
+    public void BeginShake()
     {
-            StartCoroutine(isShaking());               
+            
+            StartCoroutine(isShaking());   
     }
 
     IEnumerator isShaking()

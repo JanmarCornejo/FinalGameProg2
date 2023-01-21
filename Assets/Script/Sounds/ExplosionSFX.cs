@@ -5,14 +5,14 @@ using UnityEngine;
 public class ExplosionSFX : MonoBehaviour
 {
     public GameObject explosionSoundTrigger;
-    private ScreenShake Shake;
+    public ScreenShake Shake;
 
     void OnTriggerEnter(Collider EnteringTheTrigger)
     {
         if (EnteringTheTrigger.tag == "Player")
         {
             FindObjectOfType<SoundManager>().Play("Explosion");
-            Shake.BeginShake();
+            //Shake.BeginShake();
             Debug.Log("Explosion SFX.");
             explosionSoundTrigger.gameObject.SetActive(false);
 
