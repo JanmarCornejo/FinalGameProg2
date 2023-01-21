@@ -12,7 +12,7 @@ public class ItemPickup : MonoBehaviour
     [SerializeField] private bool isSecondKeyCard = true;
     [SerializeField] private bool isThirdKeyCard = true;
 
-    public bool AccuiredFirstKeyCard{ get; private set; }
+    public bool AccuiredFirstKeyCard { get; private set; }
     public bool AccuiredSecondKeyCard { get; private set; }
     public bool AccuiredThirdKeyCard{ get; private set; }
 
@@ -105,10 +105,11 @@ public class ItemPickup : MonoBehaviour
                     Pickup();
                     EnableText();
                     EnableDialogueTrigger();
-                    
+                    FindObjectOfType<SoundManager>().Play("MetalOpen");
+
                     Debug.Log("All Access Keycard Obtained.");
                     AccuiredSecondKeyCard = true;
-                    Debug.Log("Second keycard true");
+                    Debug.Log("Bool is " + AccuiredSecondKeyCard);
                 }
             }
         }

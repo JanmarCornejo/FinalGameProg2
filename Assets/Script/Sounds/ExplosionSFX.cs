@@ -12,10 +12,9 @@ public class ExplosionSFX : MonoBehaviour
         if (EnteringTheTrigger.tag == "Player")
         {
             FindObjectOfType<SoundManager>().Play("Explosion");
-            //Shake.BeginShake();
             Debug.Log("Explosion SFX.");
+            //Shake.BeginShake();
             explosionSoundTrigger.gameObject.SetActive(false);
-
 
         }
     }
