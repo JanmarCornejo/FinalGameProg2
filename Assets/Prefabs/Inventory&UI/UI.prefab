@@ -378,6 +378,7 @@ GameObject:
   - component: {fileID: 1455260114186003238}
   - component: {fileID: 1455260114186003256}
   - component: {fileID: 1455260114186003257}
+  - component: {fileID: 833853837}
   m_Layer: 5
   m_Name: SprintInstructionText
   m_TagString: Untagged
@@ -402,8 +403,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 175}
-  m_SizeDelta: {x: 360.6, y: 50}
+  m_AnchoredPosition: {x: 0, y: 229.6}
+  m_SizeDelta: {x: 661, y: 106.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1455260114186003256
 CanvasRenderer:
@@ -460,8 +461,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -502,6 +503,26 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!95 &833853837
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455260114186003239}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 25278c68d39b1c345a0d1828d6ec9e07, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1455260114342221518
 GameObject:
   m_ObjectHideFlags: 0
@@ -2696,7 +2717,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: -345.2}
-  m_SizeDelta: {x: 552.54, y: 157.9}
+  m_SizeDelta: {x: 1002.7, y: 157.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7244063615297033989
 CanvasRenderer:
@@ -2726,7 +2747,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I need to leave.... NOW
+  m_text: "The elevator needs an executive keycard\u2026 I need to find one"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2805,7 +2826,7 @@ Animator:
   m_GameObject: {fileID: 2309708139219191464}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e807112b693be34c85c65f0d125aa55, type: 2}
+  m_Controller: {fileID: 9100000, guid: e9f593731810bc04ca2f78d4445cba9d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2979,7 +3000,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I need to leave.... NOW
+  m_text: What was that noise?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3058,7 +3079,7 @@ Animator:
   m_GameObject: {fileID: 8643172081098322510}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e807112b693be34c85c65f0d125aa55, type: 2}
+  m_Controller: {fileID: 9100000, guid: e9f593731810bc04ca2f78d4445cba9d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3135,7 +3156,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I need to leave.... NOW
+  m_text: I need to find a way out
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3214,7 +3235,7 @@ Animator:
   m_GameObject: {fileID: 9057997090102062135}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e807112b693be34c85c65f0d125aa55, type: 2}
+  m_Controller: {fileID: 9100000, guid: e9f593731810bc04ca2f78d4445cba9d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
