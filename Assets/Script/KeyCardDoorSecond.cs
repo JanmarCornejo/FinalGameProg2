@@ -31,6 +31,7 @@ public class KeyCardDoorSecond : MonoBehaviour
 
     private void Update()
     {
+
         if (!_IsKeycardInInventory)
         {
 
@@ -55,7 +56,7 @@ public class KeyCardDoorSecond : MonoBehaviour
             {
                 if (hit.transform.CompareTag("KeyCardDoor2"))
                 {
-                    Debug.Log("You are clicking the door");
+                    Debug.Log("You are clicking the door");  
                     UnlockDoor();
                 }
             }
