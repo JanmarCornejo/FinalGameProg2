@@ -50,7 +50,7 @@ public class ClickComputerWindow : MonoBehaviour
     {
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit hit, 3))
         {
-            if (hit.transform.CompareTag("Computer"))
+            if (hit.transform.CompareTag("Cubicle"))
             {
                 if (Input.GetKey(KeyCode.E))
                 {

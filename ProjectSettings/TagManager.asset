@@ -14,6 +14,7 @@ TagManager:
   - KeyCardDoor2
   - KeyCardDoor1
   - KeyCardDoor3
+  - Cubicle
   layers:
   - Default
   - TransparentFX

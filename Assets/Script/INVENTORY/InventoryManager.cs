@@ -10,6 +10,8 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager Instance;
     public List<Item> Items = new List<Item>();
 
+    public List<ItemPickup> itemPickups= new List<ItemPickup>();
+
     public Transform ItemContent;
     public GameObject InventoryItem;
 

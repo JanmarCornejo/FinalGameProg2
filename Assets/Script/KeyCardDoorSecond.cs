@@ -33,11 +33,9 @@ public class KeyCardDoorSecond : MonoBehaviour
     {
         if (!_IsKeycardInInventory)
         {
-<<<<<<< HEAD
+
           CheckKeycard();
-=======
-            CheckKeycard();
->>>>>>> master
+
         }
         
         if (!_secondFloorStatus)
@@ -75,7 +73,7 @@ public class KeyCardDoorSecond : MonoBehaviour
         }
         
         Debug.Log("You do not have a keycard");
-        _IsKeycardInInventory = false;       
+        _IsKeycardInInventory = false;
 
     }
 
