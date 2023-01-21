@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,10 @@ public class ItemPickup : MonoBehaviour
     [SerializeField] private bool isFirstKeyCard = true;
     [SerializeField] private bool isSecondKeyCard = true;
     [SerializeField] private bool isThirdKeyCard = true;
+
+    public bool AccuiredFirstKeyCard{ get; private set; }
+    public bool AccuiredSecondKeyCard { get; private set; }
+    public bool AccuiredThirdKeyCard{ get; private set; }
 
     public GameObject dialogueTrigger;
 
@@ -25,6 +30,13 @@ public class ItemPickup : MonoBehaviour
     {
         showAcquiredPrompt.gameObject.SetActive(false);
         dialogueTrigger.gameObject.SetActive(false);
+    }
+
+    private void Awake()
+    {
+        AccuiredFirstKeyCard = false;
+        AccuiredSecondKeyCard = false;
+        AccuiredThirdKeyCard = false;
     }
 
     void Update()
@@ -74,6 +86,8 @@ public class ItemPickup : MonoBehaviour
                     Pickup();
                     EnableText();
 
+                    AccuiredFirstKeyCard = true;
+
                     Debug.Log("CEO Keycard Obtained.");
                 }
             }
@@ -91,8 +105,10 @@ public class ItemPickup : MonoBehaviour
                     Pickup();
                     EnableText();
                     EnableDialogueTrigger();
-
+                    
                     Debug.Log("All Access Keycard Obtained.");
+                    AccuiredSecondKeyCard = true;
+                    Debug.Log("Second keycard true");
                 }
             }
         }
@@ -109,8 +125,9 @@ public class ItemPickup : MonoBehaviour
                     Pickup();
                     EnableText();
                     EnableDialogue();
+                    AccuiredThirdKeyCard = true;
 
-                    Debug.Log("Executive Keycard Obtained.");
+                    Debug.Log("Elevator Keycard Obtained.");
                 }
             }
         }
