@@ -10,6 +10,7 @@ using UnityEngine;
 //  Created by Kyo Matias on 01/20/2023.
 //  Copyright © 2022 Kyo Matias. All rights reserved.
 //
+
 public class DoorController : MonoBehaviour
 {
    [SerializeField] private Animator _janitor = null;
