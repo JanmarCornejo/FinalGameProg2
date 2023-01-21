@@ -1835,7 +1835,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Explosion
     clips: {fileID: 8300000, guid: ec021a9b4d4e40d41b53f877a4eb9121, type: 3}
-    volume: 0.5
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -3106,6 +3106,10 @@ PrefabInstance:
       propertyPath: showDialogueText
       value: 
       objectReference: {fileID: 870828159383841192}
+    - target: {fileID: 1776902952574443249, guid: 8c6ff11faabeabf41810498fb30f9af9, type: 3}
+      propertyPath: explosionSoundTrigger
+      value: 
+      objectReference: {fileID: 2107221912}
     - target: {fileID: 3938928572177492497, guid: 8c6ff11faabeabf41810498fb30f9af9, type: 3}
       propertyPath: m_RootOrder
       value: 38
@@ -4092,6 +4096,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2006aa3534d9ac44ea4c921a283ca8c6, type: 3}
+--- !u!1 &2107221912 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3487403771734461021, guid: 8c6ff11faabeabf41810498fb30f9af9, type: 3}
+  m_PrefabInstance: {fileID: 1668965276}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &870828159383841188
 PrefabInstance:
   m_ObjectHideFlags: 0
