@@ -38,7 +38,9 @@ namespace LeverMain
         private void Update()
         {
             if (!IsLeverPulled)
+            {
                 PullLever();
+            }
         }
 
         private void PullLever()
