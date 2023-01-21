@@ -11,6 +11,8 @@ public class ItemPickup : MonoBehaviour
     [SerializeField] private bool isSecondKeyCard = true;
     [SerializeField] private bool isThirdKeyCard = true;
 
+    public GameObject dialogueTrigger;
+
     public TextMeshProUGUI showAcquiredPrompt;
     public TextMeshProUGUI showDialogueText;
     public Image showUnderlineAnim;
@@ -22,6 +24,7 @@ public class ItemPickup : MonoBehaviour
     private void Start()
     {
         showAcquiredPrompt.gameObject.SetActive(false);
+        dialogueTrigger.gameObject.SetActive(false);
     }
 
     void Update()
@@ -41,6 +44,11 @@ public class ItemPickup : MonoBehaviour
     {
         InventoryManager.Instance.Add(item);
         Destroy(gameObject);
+    }
+
+    public void EnableDialogueTrigger() // Enables dialogue (four) trigger box after picking up keycard_2
+    {
+        dialogueTrigger.gameObject.SetActive(true);
     }
 
     public void EnableText()
@@ -82,6 +90,7 @@ public class ItemPickup : MonoBehaviour
                 {
                     Pickup();
                     EnableText();
+                    EnableDialogueTrigger();
 
                     Debug.Log("All Access Keycard Obtained.");
                 }
