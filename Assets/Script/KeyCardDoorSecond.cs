@@ -35,6 +35,11 @@ public class KeyCardDoorSecond : MonoBehaviour
         {
             CheckKeycard();
         }
+
+        if (_IsKeycardInInventory)
+        {
+            CheckKeycard();
+        }
         
         if (!_secondFloorStatus)
         {
@@ -61,17 +66,18 @@ public class KeyCardDoorSecond : MonoBehaviour
     }
     void CheckKeycard()
     {
-        var itemPickup = FindObjectOfType<ItemPickup>();
-
-        if (itemPickup.AccuiredSecondKeyCard)
-        {
+        var gameObj = GameObject.Find("keycardTest");
+        bool itemPickup = gameObj.GetComponent<ItemPickup>().AccuiredSecondKeyCard;
+        Debug.Log("bool for Checking is " + itemPickup);
+        if (itemPickup)
+        {         
             _IsKeycardInInventory = true;
             Debug.Log("you have second keycard");
             return;
         }
         
         Debug.Log("You do not have a keycard");
-        _IsKeycardInInventory = false;       
+        _IsKeycardInInventory = false;
 
     }
 

@@ -10,8 +10,7 @@ public class ScreenShake : MonoBehaviour
 
     public void BeginShake()
     {
-            
-            StartCoroutine(isShaking());   
+                StartCoroutine(isShaking());             
     }
 
     IEnumerator isShaking()

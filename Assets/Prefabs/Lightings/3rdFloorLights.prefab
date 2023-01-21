@@ -623,6 +623,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6154669597219913815}
     m_Modifications:
+    - target: {fileID: 792811325145747934, guid: e5cd4e85f8fd4174a9ddbf911d6afb65, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 792811325174065267, guid: e5cd4e85f8fd4174a9ddbf911d6afb65, type: 3}
       propertyPath: m_Volume
       value: 0.366
@@ -670,6 +674,10 @@ PrefabInstance:
     - target: {fileID: 792811325174065267, guid: e5cd4e85f8fd4174a9ddbf911d6afb65, type: 3}
       propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].outSlope
       value: -1.0469404
+      objectReference: {fileID: 0}
+    - target: {fileID: 792811326591972077, guid: e5cd4e85f8fd4174a9ddbf911d6afb65, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 792811326667229890, guid: e5cd4e85f8fd4174a9ddbf911d6afb65, type: 3}
       propertyPath: m_RootOrder
