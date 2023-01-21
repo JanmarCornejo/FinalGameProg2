@@ -12,9 +12,9 @@ public class ItemPickup : MonoBehaviour
     [SerializeField] private bool isSecondKeyCard = true;
     [SerializeField] private bool isThirdKeyCard = true;
 
-    public bool AccuiredFirstKeyCard{ get; private set; }
-    public bool AccuiredSecondKeyCard { get; private set; }
-    public bool AccuiredThirdKeyCard{ get; private set; }
+    public static bool AccuiredFirstKeyCard{ get; private set; }
+    public static bool AccuiredSecondKeyCard { get; private set; }
+    public static bool AccuiredThirdKeyCard { get; private set; }
 
     public GameObject dialogueTrigger;
 
@@ -94,7 +94,7 @@ public class ItemPickup : MonoBehaviour
         }
     }
 
-    private void InteractSecondKeyCard()
+    public void InteractSecondKeyCard()
     {
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out RaycastHit hit, 3))
         {

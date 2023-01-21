@@ -17,26 +17,19 @@ public class KeyCardDoorSecond : MonoBehaviour
     [SerializeField] private bool _IsKeycardInInventory;
 
     public Camera PlayerCamera;
-
-
-    private void Start()
-    {
-        _IsKeycardInInventory = false;
-    }
+    
 
     private void Awake()
     {
+        _IsKeycardInInventory = false;
         _secondFloorStatus = false;
     }
 
     private void Update()
     {
-
         if (!_IsKeycardInInventory)
         {
-
-          CheckKeycard();
-
+            CheckKeycard();
         }
         
         if (!_secondFloorStatus)
@@ -56,17 +49,22 @@ public class KeyCardDoorSecond : MonoBehaviour
             {
                 if (hit.transform.CompareTag("KeyCardDoor2"))
                 {
-                    Debug.Log("You are clicking the door");  
-                    UnlockDoor();
+                    Debug.Log("You are clicking the door");
+                    if(!_IsKeycardInInventory)
+                    {
+                        CheckKeycard();
+                    }
+                    else if (_IsKeycardInInventory)
+                    {
+                        UnlockDoor();
+                    }
                 }
             }
         }
     }
     void CheckKeycard()
     {
-        var itemPickup = FindObjectOfType<ItemPickup>();
-
-        if (itemPickup.AccuiredSecondKeyCard)
+        if (ItemPickup.AccuiredSecondKeyCard)
         {
             _IsKeycardInInventory = true;
             Debug.Log("you have second keycard");
@@ -75,7 +73,7 @@ public class KeyCardDoorSecond : MonoBehaviour
         
         Debug.Log("You do not have a keycard");
         _IsKeycardInInventory = false;
-
+        
     }
 
     void UnlockDoor()
@@ -85,7 +83,6 @@ public class KeyCardDoorSecond : MonoBehaviour
             _2fd.Play("2fd", 0, 0.0f);
             Debug.Log("2nd floor door is open");
             _secondFloorStatus = true;
-        
         }
         Debug.Log("2nd floor door is locked");
     }
