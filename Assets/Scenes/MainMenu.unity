@@ -1031,6 +1031,18 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: BGM
+    clips: {fileID: 8300000, guid: 7e69d40029908144d9b9ca54484e5783, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Switch
+    clips: {fileID: 8300000, guid: 68ce3b3d06f0eec4f9ba5d80e0cc22e4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &1669733923
 Transform:
   m_ObjectHideFlags: 0
