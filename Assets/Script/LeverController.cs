@@ -23,7 +23,7 @@ namespace LeverMain
         [SerializeField] private Animator _lever = null;
         [SerializeField] private Animator _storageDoor = null;
         public bool IsLeverPulled { get; private set; }
-        [SerializeField] private GameObject[] _lights = default;
+        [SerializeField] private Light[] _lights = default;
         
 
         public Camera playerCamera;
@@ -32,6 +32,7 @@ namespace LeverMain
         private void Awake()
         {
             IsLeverPulled = false;
+
         }
 
         private void Update()
@@ -70,9 +71,14 @@ namespace LeverMain
 
         void lightStatus()
         {
-            for (int i = 0; i < _lights.Length; i++)
+            toggleLight(enabled);
+        }
+
+        void toggleLight(bool toggle)
+        {
+            foreach (var light in _lights)
             {
-                gameObject.SetActive(true);
+                light.gameObject.SetActive(true);
             }
         }
 
