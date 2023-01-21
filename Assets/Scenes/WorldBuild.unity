@@ -1304,15 +1304,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 931573744480284760, guid: ef486dbddd59fd74ab91119b8f9d2ad5, type: 3}
+    - target: {fileID: 1148057925, guid: ef486dbddd59fd74ab91119b8f9d2ad5, type: 3}
       propertyPath: crosshair
       value: 
       objectReference: {fileID: 1740591528418844792}
-    - target: {fileID: 931573744480284760, guid: ef486dbddd59fd74ab91119b8f9d2ad5, type: 3}
+    - target: {fileID: 1148057925, guid: ef486dbddd59fd74ab91119b8f9d2ad5, type: 3}
       propertyPath: mySaveWindow
       value: 
       objectReference: {fileID: 1740591528808427518}
-    - target: {fileID: 931573744480284760, guid: ef486dbddd59fd74ab91119b8f9d2ad5, type: 3}
+    - target: {fileID: 1148057925, guid: ef486dbddd59fd74ab91119b8f9d2ad5, type: 3}
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 2041206776}
@@ -2085,9 +2085,9 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3336944232443775535, guid: 336b6f33186455d4786433f6334a1ae2, type: 3}
---- !u!114 &1148057920 stripped
+--- !u!114 &1148057925 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 931573744480284760, guid: ef486dbddd59fd74ab91119b8f9d2ad5, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1148057925, guid: ef486dbddd59fd74ab91119b8f9d2ad5, type: 3}
   m_PrefabInstance: {fileID: 690417387}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -4102,7 +4102,7 @@ PrefabInstance:
     - target: {fileID: 1455260114404238804, guid: 9c72a98da3197d1438b2f860745ec1ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1148057920}
+      objectReference: {fileID: 1148057925}
     - target: {fileID: 1455260114804133002, guid: 9c72a98da3197d1438b2f860745ec1ca, type: 3}
       propertyPath: m_Name
       value: UI
@@ -4198,7 +4198,7 @@ PrefabInstance:
     - target: {fileID: 1455260115926678143, guid: 9c72a98da3197d1438b2f860745ec1ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1148057920}
+      objectReference: {fileID: 1148057925}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c72a98da3197d1438b2f860745ec1ca, type: 3}
 --- !u!114 &870828159383841189 stripped

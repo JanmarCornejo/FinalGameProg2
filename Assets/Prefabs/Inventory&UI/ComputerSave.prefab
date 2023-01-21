@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 931573745737034001}
   - component: {fileID: 931573745737034006}
   - component: {fileID: 931573745737034007}
-  - component: {fileID: 931573744480284760}
+  - component: {fileID: 1148057925}
   m_Layer: 0
   m_Name: ComputerSave
   m_TagString: Computer
@@ -291,7 +291,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &931573744480284760
+--- !u!114 &1148057925
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
