@@ -18,6 +18,7 @@ public class KeyCardDoorSecond : MonoBehaviour
 
     public Camera PlayerCamera;
 
+
     private void Start()
     {
         _IsKeycardInInventory = false;
@@ -32,7 +33,7 @@ public class KeyCardDoorSecond : MonoBehaviour
     {
         if (!_IsKeycardInInventory)
         {
-         CheckKeycard();
+            CheckKeycard();
         }
         
         if (!_secondFloorStatus)
@@ -61,6 +62,7 @@ public class KeyCardDoorSecond : MonoBehaviour
     void CheckKeycard()
     {
         var itemPickup = FindObjectOfType<ItemPickup>();
+
         if (itemPickup.AccuiredSecondKeyCard)
         {
             _IsKeycardInInventory = true;
@@ -69,8 +71,7 @@ public class KeyCardDoorSecond : MonoBehaviour
         }
         
         Debug.Log("You do not have a keycard");
-        _IsKeycardInInventory = false;
-        
+        _IsKeycardInInventory = false;       
 
     }
 
