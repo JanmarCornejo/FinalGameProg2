@@ -32,7 +32,7 @@ public class KeyCardDoorSecond : MonoBehaviour
     {
         if (!_IsKeycardInInventory)
         {
-         CheckKeycard();
+          CheckKeycard();
         }
         
         if (!_secondFloorStatus)
@@ -81,6 +81,7 @@ public class KeyCardDoorSecond : MonoBehaviour
             _2fd.Play("2fd", 0, 0.0f);
             Debug.Log("2nd floor door is open");
             _secondFloorStatus = true;
+        
         }
         Debug.Log("2nd floor door is locked");
     }
