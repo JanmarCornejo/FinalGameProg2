@@ -5,8 +5,18 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ItemPickup : MonoBehaviour
+public class ItemPickup : MonoBehaviour//, IDataPersistence
 {
+
+    /*[SerializeField] private string ID;
+
+    [ContextMenu("Generate guid for ID")]
+
+    private void GenerateGuid()
+    {
+        ID = System.Guid.NewGuid().ToString();
+    }
+    */
     [Header("Item Type")]
     [SerializeField] private bool isFirstKeyCard = true;
     [SerializeField] private bool isSecondKeyCard = true;
@@ -133,7 +143,51 @@ public class ItemPickup : MonoBehaviour
             }
         }
     }
+    /// for loading items data sana kaso di ko talaga kaya.
 
+   /* public void LoadData(GameData data)
+    {
+        data.KeyCardsCollected.TryGetValue(ID, out isFirstKeyCard);
+        if (isFirstKeyCard)
+        {
+            gameObject.SetActive(false);
+            data.KeyCardsCollected.TryGetValue(ID, out isSecondKeyCard);
+            if (isSecondKeyCard)
+            {
+                gameObject.SetActive(false);
+            }
+            data.KeyCardsCollected.TryGetValue(ID, out isThirdKeyCard);
+            if (isThirdKeyCard)
+            {
+                gameObject.SetActive(false);
+            }
+        }
+    }*/
+
+
+
+    /// for saving items data sana kaso di ko talaga kaya.
+
+
+
+    /*public void SaveData(ref GameData data)
+    {
+        if (data.KeyCardsCollected.ContainsKey(ID))
+        {
+            data.KeyCardsCollected.Remove(ID);
+        }
+        data.KeyCardsCollected.Add(ID, isFirstKeyCard);
+        if (data.KeyCardsCollected.ContainsKey(ID))
+        {
+            data.KeyCardsCollected.Remove(ID);
+        }
+        data.KeyCardsCollected.Add(ID, isSecondKeyCard);
+        if (data.KeyCardsCollected.ContainsKey(ID))
+        {
+            data.KeyCardsCollected.Remove(ID);
+        }
+        data.KeyCardsCollected.Add(ID, isThirdKeyCard);
+    }
     /*
     private void OnMouseDown()
     {
