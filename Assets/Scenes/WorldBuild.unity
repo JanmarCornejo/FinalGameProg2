@@ -5561,17 +5561,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!114 &1148057920 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6699955929572516763, guid: 6553222d913ca734fb36fbd1469a3083, type: 3}
-  m_PrefabInstance: {fileID: 5770970436150246696}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92ec8dee7c97224449d25ed5b1b2b4d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1152394742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13413,7 +13402,7 @@ PrefabInstance:
     - target: {fileID: 1455260114404238804, guid: 9c72a98da3197d1438b2f860745ec1ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1148057920}
+      objectReference: {fileID: 0}
     - target: {fileID: 1455260114804133002, guid: 9c72a98da3197d1438b2f860745ec1ca, type: 3}
       propertyPath: m_Name
       value: UI
@@ -13513,7 +13502,11 @@ PrefabInstance:
     - target: {fileID: 1455260115926678143, guid: 9c72a98da3197d1438b2f860745ec1ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1148057920}
+      objectReference: {fileID: 0}
+    - target: {fileID: 9060008679305436782, guid: 9c72a98da3197d1438b2f860745ec1ca, type: 3}
+      propertyPath: m_text
+      value: This should open the 2nd floor...
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c72a98da3197d1438b2f860745ec1ca, type: 3}
 --- !u!114 &870828159383841189 stripped

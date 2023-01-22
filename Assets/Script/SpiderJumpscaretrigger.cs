@@ -13,6 +13,7 @@ public class SpiderJumpscaretrigger : MonoBehaviour
 {
     [SerializeField] private Animator _spiderRun = null;
     private bool _DidSpiderEntrance;
+    [SerializeField] private float timeRemaining = 10;
 
     private void Awake()
     {
@@ -25,8 +26,20 @@ public class SpiderJumpscaretrigger : MonoBehaviour
         {
             FindObjectOfType<SoundManager>().Play("SpiderFinal");
             _spiderRun.Play("SPiderFinalChase", 0, 0.0f);
+
         }
 
         _DidSpiderEntrance = true;
+
+        if (timeRemaining > 0)
+        {
+            timeRemaining -= Time.deltaTime;
+        }
+        else
+        {
+            Debug.Log("Game Quitting");
+            timeRemaining = 0;
+            Application.Quit();
+        }
     }
 }
