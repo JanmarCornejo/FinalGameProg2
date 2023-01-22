@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //
 //  .cs
@@ -81,7 +82,15 @@ public class ElevatorDoor : MonoBehaviour
             _doorAnim.Play("ElevatorDoorOpen",0,0.0f);
             Debug.Log("CEO Door Open");
             _Elevator = true;
+            StartCoroutine(waitForTimer());
         }
         Debug.Log("CEO Door Is Locked");
+    }
+
+    IEnumerator waitForTimer()
+    {
+        yield return new WaitForSeconds(8);
+        Debug.Log("Game Quitting");
+        Application.Quit();
     }
 }

@@ -7646,6 +7646,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 503483422, guid: d5227bed8288f1a459d375050f0ee490, type: 3}
+      propertyPath: PlayerCamera
+      value: 
+      objectReference: {fileID: 2041206776}
     - target: {fileID: 565342360, guid: d5227bed8288f1a459d375050f0ee490, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -12669,6 +12673,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5770970436641696390, guid: 6553222d913ca734fb36fbd1469a3083, type: 3}
+      propertyPath: crosshair
+      value: 
+      objectReference: {fileID: 1740591528418844792}
+    - target: {fileID: 5770970436641696390, guid: 6553222d913ca734fb36fbd1469a3083, type: 3}
+      propertyPath: mySaveWindow
+      value: 
+      objectReference: {fileID: 1740591528808427518}
+    - target: {fileID: 5770970436641696390, guid: 6553222d913ca734fb36fbd1469a3083, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2041206776}
     - target: {fileID: 6656654449247762764, guid: 6553222d913ca734fb36fbd1469a3083, type: 3}
       propertyPath: m_Name
       value: SaveTerminal (1)
@@ -13402,6 +13418,14 @@ PrefabInstance:
     - target: {fileID: 1455260114404238804, guid: 9c72a98da3197d1438b2f860745ec1ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 11500000, guid: 92ec8dee7c97224449d25ed5b1b2b4d8, type: 3}
+    - target: {fileID: 1455260114404238804, guid: 9c72a98da3197d1438b2f860745ec1ca, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455260114404238804, guid: 9c72a98da3197d1438b2f860745ec1ca, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1455260114804133002, guid: 9c72a98da3197d1438b2f860745ec1ca, type: 3}
       propertyPath: m_Name
@@ -13501,6 +13525,10 @@ PrefabInstance:
       objectReference: {fileID: 1891878831}
     - target: {fileID: 1455260115926678143, guid: 9c72a98da3197d1438b2f860745ec1ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11500000, guid: 92ec8dee7c97224449d25ed5b1b2b4d8, type: 3}
+    - target: {fileID: 1455260115926678143, guid: 9c72a98da3197d1438b2f860745ec1ca, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9060008679305436782, guid: 9c72a98da3197d1438b2f860745ec1ca, type: 3}
@@ -13826,6 +13854,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5770970436641696390, guid: 6553222d913ca734fb36fbd1469a3083, type: 3}
+      propertyPath: crosshair
+      value: 
+      objectReference: {fileID: 1740591528418844792}
+    - target: {fileID: 5770970436641696390, guid: 6553222d913ca734fb36fbd1469a3083, type: 3}
+      propertyPath: mySaveWindow
+      value: 
+      objectReference: {fileID: 1740591528808427518}
+    - target: {fileID: 5770970436641696390, guid: 6553222d913ca734fb36fbd1469a3083, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2041206776}
     - target: {fileID: 6656654449247762764, guid: 6553222d913ca734fb36fbd1469a3083, type: 3}
       propertyPath: m_Name
       value: SaveTerminal
