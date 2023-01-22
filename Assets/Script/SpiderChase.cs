@@ -22,8 +22,9 @@ public class SpiderChase : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && _DidSpiderEntrance == false)
         {
+            FindObjectOfType<SoundManager>().Play("SpiderChase");
             _spiderRun.Play("SpiderFACEOFF",0,0.0f);
         }
 

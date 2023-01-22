@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 1
   m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.03
+  m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -2032,6 +2032,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1511418611, guid: 8bee494e06cf613438ca03259872acd2, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3632182437637587105, guid: 8bee494e06cf613438ca03259872acd2, type: 3}
       propertyPath: m_Name
       value: 3rdFloorFurniture
@@ -4767,6 +4771,24 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: MetalOpen
     clips: {fileID: 8300000, guid: f77234648d173d14bb3275dd7f42fda8, type: 3}
+    volume: 1
+    pitch: 1.8
+    loop: 0
+    source: {fileID: 0}
+  - name: SpiderZoom
+    clips: {fileID: 8300000, guid: d645f3083540c6f4ead8517f1aef4608, type: 3}
+    volume: 1
+    pitch: 1.8
+    loop: 0
+    source: {fileID: 0}
+  - name: SpiderChase
+    clips: {fileID: 8300000, guid: 3071dc23a50dc71418010d46713583ce, type: 3}
+    volume: 0.7
+    pitch: 1.8
+    loop: 1
+    source: {fileID: 0}
+  - name: SpiderFinal
+    clips: {fileID: 8300000, guid: 5e6c9d9b7fd38144e81cd516cd87b080, type: 3}
     volume: 1
     pitch: 1.8
     loop: 0
@@ -13479,6 +13501,10 @@ PrefabInstance:
     - target: {fileID: 1455260114804133006, guid: 9c72a98da3197d1438b2f860745ec1ca, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455260114856646598, guid: 9c72a98da3197d1438b2f860745ec1ca, type: 3}
+      propertyPath: m_text
+      value: I need to go to the Elevator... NOW
       objectReference: {fileID: 0}
     - target: {fileID: 1455260115139133532, guid: 9c72a98da3197d1438b2f860745ec1ca, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

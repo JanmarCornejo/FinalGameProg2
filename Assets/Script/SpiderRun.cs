@@ -22,8 +22,10 @@ public class SpiderRun : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && _didSpiderPass == false)
         {
+
+            FindObjectOfType<SoundManager>().Play("SpiderZoom");
             _spiderRun.Play("SpiderRun",0,0.0f);
             
         }

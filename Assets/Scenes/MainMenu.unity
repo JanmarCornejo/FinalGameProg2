@@ -1043,6 +1043,36 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Explosion
+    clips: {fileID: 8300000, guid: ec021a9b4d4e40d41b53f877a4eb9121, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SpiderZoom
+    clips: {fileID: 8300000, guid: d645f3083540c6f4ead8517f1aef4608, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SpiderChase
+    clips: {fileID: 8300000, guid: 3071dc23a50dc71418010d46713583ce, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: SpiderFinal
+    clips: {fileID: 8300000, guid: 5e6c9d9b7fd38144e81cd516cd87b080, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MetalOpen
+    clips: {fileID: 8300000, guid: f77234648d173d14bb3275dd7f42fda8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &1669733923
 Transform:
   m_ObjectHideFlags: 0

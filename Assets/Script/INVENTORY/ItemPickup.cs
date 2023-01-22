@@ -105,7 +105,8 @@ public class ItemPickup : MonoBehaviour
                     Pickup();
                     EnableText();
                     EnableDialogueTrigger();
-                    
+                    FindObjectOfType<SoundManager>().Play("MetalOpen");
+
                     Debug.Log("All Access Keycard Obtained.");
                     AccuiredSecondKeyCard = true;
                     Debug.Log("Second keycard true");

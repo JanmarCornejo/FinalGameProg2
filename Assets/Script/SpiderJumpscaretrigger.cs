@@ -21,8 +21,9 @@ public class SpiderJumpscaretrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && _DidSpiderEntrance == true)
         {
+            FindObjectOfType<SoundManager>().Play("SpiderFinal");
             _spiderRun.Play("SPiderFinalChase", 0, 0.0f);
         }
 
